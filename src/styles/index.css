@@ -1,0 +1,62 @@
+/* ESTILOS A INDEX */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #161a1d;
+}
+
+.nav-home {
+  background-color: #161a1d;
+  color: #fff3b0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+}
+
+.nav-home__logo {
+  margin-left: 30px;
+}
+
+.nav-home__container-links {
+  display: none;
+}
+
+.nav-home__container-links a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav-home__hamburger-menu {
+  margin-right: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-home__hamburger-menu {
+    display: none;
+  }
+  .nav-home__container-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 30px;
+  }
+  .nav-home__container-links a:hover {
+    color: #fff3b0;
+  }
+}
+/*# sourceMappingURL=index.css.map */
