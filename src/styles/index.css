@@ -42,11 +42,18 @@ body {
   .nav-home__hamburger-menu {
     display: none;
   }
-  .nav-home__container-links {
+  .nav-home__container-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 30%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .nav-home__container-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -54,9 +61,16 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-right: 30px;
+    width: 70%;
   }
   .nav-home__container-links a:hover {
     color: #fff3b0;
   }
+}
+
+.cart-widget {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */

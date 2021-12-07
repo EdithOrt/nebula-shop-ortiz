@@ -24,12 +24,17 @@
         &__hamburger-menu{
             display: none;
         }
-        &__container-links{
+        &__container-menu{
             display: flex;
             width: 30%;
+            justify-content: space-around;
+        }
+        &__container-links{
+            display: flex;
             justify-content: space-between;
             align-items: center;
             margin-right: 30px;
+            width: 70%;
             a:hover{
                 color: $ligth_yellow;
             }
