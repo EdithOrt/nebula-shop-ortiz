@@ -1,0 +1,30 @@
+.item-count{
+    display: flex;
+    background-color: $black;
+    justify-content: space-around;
+    align-items: center;
+    width: 20rem;
+    height: 5rem;
+    &__button{
+        font-size: 30px;
+        height: 80%;
+        width: 20%;
+        border: none;
+        cursor: pointer;
+        background-color: $dark_yellow;
+        color: $white;
+        &:hover{
+            background-color: $ligth_yellow;
+            color: $black;
+        }
+    }
+    &__container-quantity{
+        background-color: $white;
+        width: 40%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+    }
+}
