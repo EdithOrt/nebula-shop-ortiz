@@ -152,4 +152,13 @@ body {
   color: #161a1d;
   background-color: #fff3b0;
 }
+
+.item-count-container .button-on-add:disabled, .item-count-container .button-on-add[disabled] {
+  background-color: gray;
+}
+
+.item-count-container .button-on-add:disabled:hover, .item-count-container .button-on-add[disabled]:hover {
+  color: white;
+  cursor: auto;
+}
 /*# sourceMappingURL=index.css.map */

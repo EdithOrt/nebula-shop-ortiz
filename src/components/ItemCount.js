@@ -7,7 +7,7 @@ export default function ItemCount({ stock, initValue, onAdd }) {
     if (typeOfOperation === "onAdd") {
       count < stock && setCount(count + 1);
     } else if (typeOfOperation === "onRemove") {
-      count > 1 && setCount(count - 1);
+      count > 0 && setCount(count - 1);
     }
   };
   return (
@@ -16,7 +16,7 @@ export default function ItemCount({ stock, initValue, onAdd }) {
         <button
           className="item-count__button"
           onClick={() => handleCount("onRemove")}
-          disabled={count <= 1}
+          disabled={count <= 0}
         >
           -
         </button>
@@ -34,7 +34,11 @@ export default function ItemCount({ stock, initValue, onAdd }) {
         </button>
       </div>
 
-      <button onClick={() => onAdd(count)} className="button-on-add">
+      <button
+        onClick={() => onAdd(count, setCount)}
+        className="button-on-add"
+        disabled={count <= 0 || count > stock}
+      >
         Agregar al carrito
       </button>
     </div>
