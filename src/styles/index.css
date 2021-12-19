@@ -74,7 +74,18 @@ body {
   cursor: pointer;
 }
 
-.item-count {
+.item-count-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20rem;
+}
+
+.item-count-container .item-count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,11 +95,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20rem;
+  width: 100%;
   height: 5rem;
 }
 
-.item-count__button {
+.item-count-container .item-count__button {
   font-size: 30px;
   height: 80%;
   width: 20%;
@@ -98,12 +109,21 @@ body {
   color: #ffffff;
 }
 
-.item-count__button:hover {
+.item-count-container .item-count__button:hover {
   background-color: #fff3b0;
   color: #161a1d;
 }
 
-.item-count__container-quantity {
+.item-count-container .item-count__button:disabled, .item-count-container .item-count__button[disabled] {
+  background-color: gray;
+}
+
+.item-count-container .item-count__button:disabled:hover, .item-count-container .item-count__button[disabled]:hover {
+  color: white;
+  cursor: auto;
+}
+
+.item-count-container .item-count__container-quantity {
   background-color: #ffffff;
   width: 40%;
   height: 80%;
@@ -117,5 +137,19 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 700;
+}
+
+.item-count-container .button-on-add {
+  height: 3rem;
+  background-color: #e09f3e;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.item-count-container .button-on-add:hover {
+  color: #161a1d;
+  background-color: #fff3b0;
 }
 /*# sourceMappingURL=index.css.map */
