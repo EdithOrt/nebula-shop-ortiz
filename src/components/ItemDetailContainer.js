@@ -16,7 +16,9 @@ export default function ItemDetailContainer() {
     );
   }, []);
 
-  !item && <p>Loading</p>;
+  if (!item) {
+    return <p>Loading</p>;
+  }
   return (
     <>
       <ItemDetail item={item} />
