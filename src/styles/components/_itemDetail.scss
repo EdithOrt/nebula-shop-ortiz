@@ -1,0 +1,23 @@
+.item-detail {
+  padding: 2rem;
+  display: flex;
+  &__img {
+  }
+  &__text {
+    padding-left: 2rem;
+    p {
+      margin-bottom: 2rem;
+    }
+    &__name {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    &__price {
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+    &__description {
+      width: 50%;
+    }
+  }
+}

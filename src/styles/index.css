@@ -143,4 +143,33 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.item-detail {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item-detail__text {
+  padding-left: 2rem;
+}
+
+.item-detail__text p {
+  margin-bottom: 2rem;
+}
+
+.item-detail__text__name {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.item-detail__text__price {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.item-detail__text__description {
+  width: 50%;
+}
 /*# sourceMappingURL=index.css.map */
