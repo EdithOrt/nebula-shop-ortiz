@@ -1,44 +1,51 @@
-.nav-home{
-    background-color: $black;
+.nav-home {
+  background-color: $black;
+  color: $ligth_yellow;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  a:link,
+  a:visited {
+    text-decoration: none;
     color: $ligth_yellow;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    &__logo{
-        margin-left: 30px;
+  }
+  a:hover {
+    color: $dark_yellow;
+  }
+  &__logo {
+    margin-left: 30px;
+  }
+  &__container-links {
+    display: none;
+    a {
+      text-decoration: none;
+      color: $white;
     }
-    &__container-links{
-        display: none;
-        a{
-            text-decoration: none;
-            color: $white;
-        }
-    }
-    &__hamburger-menu{
-        margin-right: 30px;
-    }
+  }
+  &__hamburger-menu {
+    margin-right: 30px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .nav-home{
-        &__hamburger-menu{
-            display: none;
-        }
-        &__container-menu{
-            display: flex;
-            width: 30%;
-            justify-content: space-around;
-        }
-        &__container-links{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-right: 30px;
-            width: 70%;
-            a:hover{
-                color: $ligth_yellow;
-            }
-        }
+  .nav-home {
+    &__hamburger-menu {
+      display: none;
     }
-    
+    &__container-menu {
+      display: flex;
+      width: 30%;
+      justify-content: space-around;
+    }
+    &__container-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 30px;
+      width: 70%;
+      a:hover {
+        color: $ligth_yellow;
+      }
+    }
+  }
 }

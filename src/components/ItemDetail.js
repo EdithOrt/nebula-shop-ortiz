@@ -16,11 +16,9 @@ export default function ItemDetail({ item }) {
   console.log(`Quedan ${stock} piezas en el stock`);
   return (
     <div className="item-detail" id={item.id}>
-      <img
-        className="item-detail__img"
-        src={item.pictureUrl}
-        alt="imagen de producto"
-      />
+      <div className="item-detail__img">
+        <img src={item.pictureUrl} alt="imagen de producto" />
+      </div>
 
       <div className="item-detail__text">
         <p className="item-detail__text__name">{item.name}</p>

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { NavLink, useParams } from "react-router-dom";
+
 export default function Item({ id, title, description, price, pictureUrl }) {
   return (
     <div id={id} className="product-resume-container">
@@ -7,7 +9,7 @@ export default function Item({ id, title, description, price, pictureUrl }) {
       <img src={pictureUrl} alt="imagen de producto" />
       <p>{description}</p>
       <p>{price}</p>
-      <button>Comprar</button>
+      <NavLink to={`/item/${id}`}>Comprar</NavLink>
     </div>
   );
 }
