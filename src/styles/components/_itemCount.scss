@@ -41,11 +41,13 @@
     }
   }
   .button-on-add {
-    height: 3rem;
+    padding: 2rem 3rem;
     background-color: $dark_yellow;
     color: $white;
     border: none;
     font-weight: 700;
+    text-decoration: none;
+    text-align: center;
     cursor: pointer;
     &:hover {
       color: $black;

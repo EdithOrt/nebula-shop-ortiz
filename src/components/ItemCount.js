@@ -1,21 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-export default function ItemCount({ stock, initValue, onAdd }) {
-  const [count, setCount] = useState(initValue);
-
-  const handleCount = (typeOfOperation) => {
-    if (typeOfOperation === "onAdd") {
-      count < stock && setCount(count + 1);
-    } else if (typeOfOperation === "onRemove") {
-      count > 0 && setCount(count - 1);
-    }
-  };
+export default function ItemCount({ stock, count, onAdd }) {
   return (
     <div className="item-count-container">
       <div className="item-count">
         <button
           className="item-count__button"
-          onClick={() => handleCount("onRemove")}
+          onClick={() => onAdd("onRemove")}
           disabled={count <= 0}
         >
           -
@@ -27,20 +19,16 @@ export default function ItemCount({ stock, initValue, onAdd }) {
 
         <button
           className="item-count__button"
-          onClick={() => handleCount("onAdd")}
+          onClick={() => onAdd("onAdd")}
           disabled={count >= stock}
         >
           +
         </button>
       </div>
 
-      <button
-        onClick={() => onAdd(count, setCount)}
-        className="button-on-add"
-        disabled={count <= 0 || count > stock}
-      >
+      <Link className="button-on-add" to="/cart">
         Agregar al carrito
-      </button>
+      </Link>
     </div>
   );
 }
