@@ -15,8 +15,6 @@ export default function ItemDetail({ item }) {
       count > 0 && setCount(count - 1);
     }
   };
-
-  console.log(`Quedan ${stock} piezas en el stock`);
   return (
     <div className="item-detail" id={item.id}>
       <div className="item-detail__img">
