@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function ItemCount({ stock, count, onAdd }) {
+export default function ItemCount({ stock, count, onAdd, addToCart }) {
   return (
     <div className="item-count-container">
       <div className="item-count">
         <button
           className="item-count__button"
           onClick={() => onAdd("onRemove")}
-          disabled={count <= 0}
+          disabled={!count}
         >
           -
         </button>
@@ -26,8 +26,20 @@ export default function ItemCount({ stock, count, onAdd }) {
         </button>
       </div>
 
-      <Link className="button-on-add" to="/cart">
-        Agregar al carrito
+      <button
+        onClick={() => addToCart()}
+        disabled={count <= 0}
+        className="button-on-add"
+      >
+        Añadir
+      </button>
+
+      <Link
+        className="button-buy"
+        to={!count ? "" : `/cart`}
+        disabled={count <= 0}
+      >
+        Ver carrito
       </Link>
     </div>
   );

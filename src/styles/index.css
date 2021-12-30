@@ -149,9 +149,9 @@ body {
   font-weight: 700;
 }
 
-.item-count-container .button-on-add {
+.item-count-container .button-buy {
   padding: 2rem 3rem;
-  background-color: #e09f3e;
+  background-color: #161a1d;
   color: #ffffff;
   border: none;
   font-weight: 700;
@@ -160,18 +160,33 @@ body {
   cursor: pointer;
 }
 
-.item-count-container .button-on-add:hover {
+.item-count-container .button-buy:hover {
   color: #161a1d;
   background-color: #fff3b0;
 }
 
-.item-count-container .button-on-add:disabled, .item-count-container .button-on-add[disabled] {
+.item-count-container .button-buy:disabled, .item-count-container .button-buy[disabled] {
   background-color: gray;
 }
 
-.item-count-container .button-on-add:disabled:hover, .item-count-container .button-on-add[disabled]:hover {
+.item-count-container .button-buy:disabled:hover, .item-count-container .button-buy[disabled]:hover {
   color: white;
   cursor: auto;
+}
+
+.item-count-container .button-on-add {
+  cursor: pointer;
+  background-color: #e09f3e;
+  color: #ffffff;
+  border: none;
+  height: 4rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.item-count-container .button-on-add:hover {
+  color: #161a1d;
+  background-color: #fff3b0;
 }
 
 .product-resume-container {
