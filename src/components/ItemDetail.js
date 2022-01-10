@@ -5,10 +5,8 @@ import ItemCount from "./ItemCount";
 import CartContext from "../context/CartContext";
 
 export default function ItemDetail({ item }) {
-  const { addItem, clear, isInCart, removeItem, products } =
-    useContext(CartContext);
+  const { addItem } = useContext(CartContext);
 
-  // const [stock, setStock] = useState(10);
   const initValue = 1;
 
   const [count, setCount] = useState(initValue);
@@ -22,12 +20,9 @@ export default function ItemDetail({ item }) {
   };
 
   const addToCart = () => {
-    console.log("click a comprar producto");
-    addItem({ ...item, quantity: count });
+    addItem({ ...item, quantity: count, totalProduct: item.price * count });
     setCount(initValue);
-    console.log(products);
   };
-  // console.log(item);
   return (
     <div className="item-detail" id={item.id}>
       <div className="item-detail__img">

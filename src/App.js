@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import CustomProvider from "./components/CustomProvider";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
             element={<ItemListContainer />}
           />
           <Route exact path="/item/:idItem" element={<ItemDetailContainer />} />
-          <Route exact path="/cart" element={<p>Cart</p>} />
+          <Route exact path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </CustomProvider>

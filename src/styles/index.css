@@ -82,6 +82,13 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart-widget__number {
+  color: #fff3b0;
 }
 
 .item-count-container {

@@ -31,7 +31,7 @@ export default function ItemCount({ stock, count, onAdd, addToCart }) {
         disabled={count <= 0}
         className="button-on-add"
       >
-        Añadir
+        Agregar
       </button>
 
       <Link
@@ -39,7 +39,7 @@ export default function ItemCount({ stock, count, onAdd, addToCart }) {
         to={!count ? "" : `/cart`}
         disabled={count <= 0}
       >
-        Ver carrito
+        Terminar compra
       </Link>
     </div>
   );
