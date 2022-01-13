@@ -5,27 +5,28 @@ import ItemDetail from "./ItemDetail";
 
 import { useParams } from "react-router-dom";
 
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+
 export default function ItemDetailContainer() {
   const { idItem } = useParams();
 
   const [item, setItem] = useState(undefined);
 
   useEffect(() => {
+    const db = getFirestore();
+
     if (idItem) {
-      productsPromise.then(
-        (response) => {
-          response.map((product) => {
-            if (product.id === Number(idItem)) {
-              return setItem(product);
-            }
-          });
-        },
-        (error) => {
-          console.log(error);
+      const productRef = doc(db, "itemCollection", idItem);
+      getDoc(productRef).then((snapshot) => {
+        if (snapshot.exists()) {
+          setItem({ id: snapshot.id, ...snapshot.data() });
         }
-      );
+      });
     }
   }, [idItem]);
+
+  console.log(item);
+  console.log(idItem);
 
   if (!item) {
     return <p>Loading</p>;

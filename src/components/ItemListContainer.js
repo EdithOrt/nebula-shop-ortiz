@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import productsPromise from "../mock/products";
 import ItemList from "./ItemList";
+
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 
 export default function ItemListContainer() {
   const { idCategory } = useParams();
@@ -10,23 +17,33 @@ export default function ItemListContainer() {
   const [items, setItems] = useState(undefined);
 
   useEffect(() => {
-    productsPromise.then(
-      (response) => {
-        if (!idCategory) {
-          setItems(response);
-        } else {
-          const products = response.filter((item) => {
-            return item.category === idCategory;
-          });
+    const db = getFirestore();
 
-          setItems(products);
+    if (!idCategory) {
+      const itemsCollection = collection(db, "itemCollection");
+      getDocs(itemsCollection).then((snapshot) => {
+        if (snapshot.size === 0) {
+          console.log("No result");
         }
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+
+        setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      });
+    } else {
+      const queryCategory = query(
+        collection(db, "itemCollection"),
+        where("category", "==", idCategory)
+      );
+      getDocs(queryCategory).then((snapshot) => {
+        if (snapshot.size === 0) {
+          console.log("No result");
+        }
+
+        setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      });
+    }
   }, [idCategory]);
+
+  console.log(items);
 
   return <div>{items ? <ItemList items={items} /> : <p>Loading...</p>}</div>;
 }

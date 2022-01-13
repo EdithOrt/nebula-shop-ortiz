@@ -1,14 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import { initializeApp } from "firebase/app";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCLN4TfgDBGoWFpT2m3UDaVmY6tF3bc-LM",
+  authDomain: "nebula-shop.firebaseapp.com",
+  projectId: "nebula-shop",
+  storageBucket: "nebula-shop.appspot.com",
+  messagingSenderId: "1007928044602",
+  appId: "1:1007928044602:web:00d4ef7eb10861324b9903",
+};
+
+// Initialize Firebase
+initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
