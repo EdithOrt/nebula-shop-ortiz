@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import productsPromise from "../mock/products";
 import ItemDetail from "./ItemDetail";
 
 import { useParams } from "react-router-dom";
@@ -24,9 +23,6 @@ export default function ItemDetailContainer() {
       });
     }
   }, [idItem]);
-
-  console.log(item);
-  console.log(idItem);
 
   if (!item) {
     return <p>Loading</p>;

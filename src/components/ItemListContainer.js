@@ -43,7 +43,5 @@ export default function ItemListContainer() {
     }
   }, [idCategory]);
 
-  console.log(items);
-
   return <div>{items ? <ItemList items={items} /> : <p>Loading...</p>}</div>;
 }

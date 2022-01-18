@@ -9,6 +9,8 @@ export default function CustomProvider({ children }) {
 
   const [totalOfProducts, setTotalOfProducts] = useState(0);
 
+  const [order, setOrder] = useState([]);
+
   const isInCart = (itemId) => {
     let validation = false;
     if (products.length) {
@@ -75,6 +77,22 @@ export default function CustomProvider({ children }) {
     setProducts([]);
     setTotal(0);
     setTotalOfProducts(0);
+    setOrder([]);
+  };
+
+  const orderToSave = () => {
+    const newArray = [];
+    products.map((product) => {
+      newArray.push({
+        id: product.id,
+        price: product.price,
+        quantity: product.quantity,
+        title: product.title,
+        totalProduct: product.totalProduct,
+      });
+    });
+
+    setOrder(newArray);
   };
 
   useEffect(() => {
@@ -82,6 +100,7 @@ export default function CustomProvider({ children }) {
     return () => {
       setTotalOfProducts(0);
       setTotal(0);
+      setOrder([]);
     };
   }, [products]);
 
@@ -95,6 +114,8 @@ export default function CustomProvider({ children }) {
         products: products,
         total,
         totalOfProducts,
+        orderToSave,
+        order,
       }}
     >
       {children}
