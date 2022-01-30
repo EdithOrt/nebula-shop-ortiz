@@ -1,15 +1,47 @@
-import {useState} from 'react'
-import ItemCount from './ItemCount'
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-export default function ItemListContainer({greeting}) {
-    const stock = 20
+import ItemList from "./ItemList";
 
-    const [count, setCount] = useState({initialValue: 1, stock: stock})
-    return (
-        <div>
-            <p>{greeting}</p>
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 
-            <ItemCount count={count} setCount={setCount} />
-        </div>
-    )
+export default function ItemListContainer() {
+  const { idCategory } = useParams();
+
+  const [items, setItems] = useState(undefined);
+
+  useEffect(() => {
+    const db = getFirestore();
+
+    if (!idCategory) {
+      const itemsCollection = collection(db, "itemCollection");
+      getDocs(itemsCollection).then((snapshot) => {
+        if (snapshot.size === 0) {
+          console.log("No result");
+        }
+
+        setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      });
+    } else {
+      const queryCategory = query(
+        collection(db, "itemCollection"),
+        where("category", "==", idCategory)
+      );
+      getDocs(queryCategory).then((snapshot) => {
+        if (snapshot.size === 0) {
+          console.log("No result");
+        }
+
+        setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      });
+    }
+  }, [idCategory]);
+
+  return <div>{items ? <ItemList items={items} /> : <p>Loading...</p>}</div>;
 }

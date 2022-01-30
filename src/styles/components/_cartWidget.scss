@@ -1,8 +1,11 @@
-.cart-widget{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    &__icon{
-
-    }
+.cart-widget {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  &__icon {
+  }
+  &__number {
+    color: $ligth_yellow;
+  }
 }

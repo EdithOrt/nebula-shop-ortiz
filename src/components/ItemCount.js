@@ -1,36 +1,47 @@
-import React from 'react'
+import { LinkButton, SimpleButton } from "./Button";
 
-export default function ItemCount({count, setCount}) {
-    const handleCount = (typeOfOperation) =>{
-        if (typeOfOperation === 'onAdd'){
-            if(count.initialValue < 20){
-                setCount({
-                    ...count,
-                    initialValue: ++count.initialValue 
-                })
-            } else {
-                console.log('ya no hay stock')
-            }
-        } else if (typeOfOperation === 'onRemove'){
-            if(count.initialValue > 1){
-                setCount({
-                    ...count,
-                    initialValue: --count.initialValue
-                })
-            } else {
-                console.log('ya no se puede disminuir')
-            }
-        }
-    }
-    return (
-        <div className='item-count'>
-            <button className='item-count__button' onClick={() => handleCount('onRemove')}>-</button>
+export default function ItemCount({ stock, count, onAdd, addToCart }) {
+  return (
+    <div className="item-count-container">
+      <div className="item-count">
+        <button
+          className="item-count__button"
+          onClick={() => onAdd("onRemove")}
+          disabled={!count}
+        >
+          -
+        </button>
 
-            <div className='item-count__container-quantity'>
-                <p>{count.initialValue}</p>
-            </div>
-
-            <button className='item-count__button' onClick={() => handleCount('onAdd')}>+</button>
+        <div className="item-count__container-quantity">
+          <p>{count}</p>
         </div>
-    )
+
+        <button
+          className="item-count__button"
+          onClick={() => onAdd("onAdd")}
+          disabled={count >= stock}
+        >
+          +
+        </button>
+      </div>
+
+      <div className="buttons-container">
+        <div className="container-button">
+          <SimpleButton
+            onClick={() => addToCart()}
+            disabled={count <= 0}
+            text="Agregar"
+          />
+        </div>
+
+        <div className="container-button">
+          <LinkButton
+            to={!count ? "" : `/cart`}
+            disabled={count <= 0}
+            text="Ver carrito"
+          />
+        </div>
+      </div>
+    </div>
+  );
 }

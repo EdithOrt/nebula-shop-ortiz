@@ -1,0 +1,129 @@
+.user-modal {
+  position: absolute;
+  z-index: 2;
+  background-color: #0000001f;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    background-color: white;
+    border-radius: 30px;
+    width: 40%;
+    height: 33rem;
+    padding: 3rem;
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .inputs-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1rem;
+
+          label {
+            font-weight: 600;
+            color: $dark_yellow;
+            margin-bottom: 0.5rem;
+            text-align: center;
+          }
+
+          input {
+            height: 2.5rem;
+            padding: 0 1rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+
+            &.error-input {
+              border: 1px solid $red;
+
+              &:focus {
+                border: 1px solid $red;
+                outline-color: $red;
+              }
+            }
+          }
+
+          .error {
+            color: #d00000;
+            font-weight: 700;
+            font-size: 12px;
+            margin-left: 1rem;
+          }
+        }
+      }
+
+      .submit-container {
+        display: flex;
+        justify-content: center;
+
+        input {
+          width: 300px;
+          text-decoration: none;
+          color: $white;
+          background-color: $black;
+          border: none;
+          border-radius: 10px;
+          height: 3rem;
+          font-weight: 700;
+          font-size: 1rem;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $dark_yellow;
+            color: $white;
+          }
+
+          &:disabled,
+          &[disabled] {
+            background-color: gray;
+
+            &:hover {
+              color: white;
+              cursor: auto;
+            }
+          }
+        }
+      }
+    }
+
+    &.successful {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .alert {
+        color: $dark_yellow;
+        margin-bottom: 2rem;
+        font-size: 30px;
+      }
+
+      .info {
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .container-button {
+        margin-top: 4rem;
+        height: 3rem;
+        width: 200px;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+}
