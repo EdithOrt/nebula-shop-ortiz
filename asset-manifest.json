@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/EdithOrt/nebula-shop-ortiz/static/css/main.b3dacc8b.chunk.css",
+    "main.js": "/EdithOrt/nebula-shop-ortiz/static/js/main.e636ecfd.chunk.js",
+    "main.js.map": "/EdithOrt/nebula-shop-ortiz/static/js/main.e636ecfd.chunk.js.map",
+    "runtime-main.js": "/EdithOrt/nebula-shop-ortiz/static/js/runtime-main.9a5091ef.js",
+    "runtime-main.js.map": "/EdithOrt/nebula-shop-ortiz/static/js/runtime-main.9a5091ef.js.map",
+    "static/js/2.e096d503.chunk.js": "/EdithOrt/nebula-shop-ortiz/static/js/2.e096d503.chunk.js",
+    "static/js/2.e096d503.chunk.js.map": "/EdithOrt/nebula-shop-ortiz/static/js/2.e096d503.chunk.js.map",
+    "static/js/3.09754f8b.chunk.js": "/EdithOrt/nebula-shop-ortiz/static/js/3.09754f8b.chunk.js",
+    "static/js/3.09754f8b.chunk.js.map": "/EdithOrt/nebula-shop-ortiz/static/js/3.09754f8b.chunk.js.map",
+    "index.html": "/EdithOrt/nebula-shop-ortiz/index.html",
+    "static/css/main.b3dacc8b.chunk.css.map": "/EdithOrt/nebula-shop-ortiz/static/css/main.b3dacc8b.chunk.css.map",
+    "static/js/2.e096d503.chunk.js.LICENSE.txt": "/EdithOrt/nebula-shop-ortiz/static/js/2.e096d503.chunk.js.LICENSE.txt",
+    "static/media/empty-cart.d17c8390.svg": "/EdithOrt/nebula-shop-ortiz/static/media/empty-cart.d17c8390.svg",
+    "static/media/hamburger-icon.adb0166c.svg": "/EdithOrt/nebula-shop-ortiz/static/media/hamburger-icon.adb0166c.svg",
+    "static/media/shopping_cart.5bd91c53.svg": "/EdithOrt/nebula-shop-ortiz/static/media/shopping_cart.5bd91c53.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a5091ef.js",
+    "static/js/2.e096d503.chunk.js",
+    "static/css/main.b3dacc8b.chunk.css",
+    "static/js/main.e636ecfd.chunk.js"
+  ]
+}
