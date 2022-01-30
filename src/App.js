@@ -13,7 +13,7 @@ import Cart from "./components/Cart";
 function App() {
   return (
     <CustomProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/nebula-shop-ortiz">
         <NavBar />
 
         <Routes>
