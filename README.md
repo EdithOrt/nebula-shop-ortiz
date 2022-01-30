@@ -6,7 +6,7 @@ Ecommerce realizado con react js con productos en venta como: libretas, playeras
 
 ## Cómo ver el proyecto en línea
 
-El proyecto se encuentra desplegado en github pages en el siguiente enlace:
+El proyecto se encuentra desplegado en github pages en el siguiente enlace: [https://edithort.github.io/nebula-shop-ortiz/](https://edithort.github.io/nebula-shop-ortiz/)
 
 ## `npm start`
 
