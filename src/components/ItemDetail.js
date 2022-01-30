@@ -30,16 +30,18 @@ export default function ItemDetail({ item }) {
       </div>
 
       <div className="item-detail__text">
-        <p className="item-detail__text__name">{item.name}</p>
-        <p className="item-detail__text__price">{`$ ${item.price}`}</p>
+        <p className="item-detail__text__name">{item.title}</p>
+        <p className="item-detail__text__price">{`$ ${item.price} MXN`}</p>
         <p className="item-detail__text__description">{item.description}</p>
 
-        <ItemCount
-          stock={item.stock}
-          count={count}
-          onAdd={onAdd}
-          addToCart={addToCart}
-        />
+        <div className="count">
+          <ItemCount
+            stock={item.stock}
+            count={count}
+            onAdd={onAdd}
+            addToCart={addToCart}
+          />
+        </div>
       </div>
     </div>
   );

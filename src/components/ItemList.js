@@ -9,7 +9,6 @@ export default function ItemList({ items }) {
         <Item
           id={item.id}
           title={item.title}
-          description={item.description}
           price={item.price}
           pictureUrl={item.pictureUrl}
           key={item.id}

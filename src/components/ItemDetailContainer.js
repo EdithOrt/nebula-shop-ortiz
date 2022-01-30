@@ -25,7 +25,11 @@ export default function ItemDetailContainer() {
   }, [idItem]);
 
   if (!item) {
-    return <p>Loading</p>;
+    return (
+      <div className="item-message">
+        <p>El producto no existe :(</p>
+      </div>
+    );
   }
   return <ItemDetail item={item} />;
 }

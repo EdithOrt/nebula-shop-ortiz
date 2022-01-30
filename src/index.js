@@ -5,8 +5,10 @@ import { initializeApp } from "firebase/app";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+const key = process.env.REACT_APP_FIREBASE_KEY;
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCLN4TfgDBGoWFpT2m3UDaVmY6tF3bc-LM",
+  apiKey: key,
   authDomain: "nebula-shop.firebaseapp.com",
   projectId: "nebula-shop",
   storageBucket: "nebula-shop.appspot.com",

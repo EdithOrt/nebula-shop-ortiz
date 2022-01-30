@@ -4,26 +4,41 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+  font-weight: 700;
+
   a:link,
   a:visited {
     text-decoration: none;
-    color: $ligth_yellow;
+    color: $dark_yellow;
   }
+
   a:hover {
     color: $dark_yellow;
   }
+
   &__logo {
     margin-left: 30px;
   }
+
   &__container-links {
     display: none;
+
     a {
       text-decoration: none;
       color: $white;
     }
   }
+
   &__hamburger-menu {
     margin-right: 30px;
+  }
+
+  .cart-widget {
+    margin-right: 30px;
+
+    &__icon {
+      width: 26px;
+    }
   }
 }
 
@@ -32,17 +47,20 @@
     &__hamburger-menu {
       display: none;
     }
+
     &__container-menu {
       display: flex;
       width: 30%;
       justify-content: space-around;
     }
+
     &__container-links {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-right: 30px;
       width: 70%;
+
       a:hover {
         color: $ligth_yellow;
       }

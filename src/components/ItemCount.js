@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { LinkButton, SimpleButton } from "./Button";
 
 export default function ItemCount({ stock, count, onAdd, addToCart }) {
   return (
@@ -25,21 +25,23 @@ export default function ItemCount({ stock, count, onAdd, addToCart }) {
         </button>
       </div>
 
-      <button
-        onClick={() => addToCart()}
-        disabled={count <= 0}
-        className="button-on-add"
-      >
-        Agregar
-      </button>
+      <div className="buttons-container">
+        <div className="container-button">
+          <SimpleButton
+            onClick={() => addToCart()}
+            disabled={count <= 0}
+            text="Agregar"
+          />
+        </div>
 
-      <Link
-        className="button-buy"
-        to={!count ? "" : `/cart`}
-        disabled={count <= 0}
-      >
-        Terminar compra
-      </Link>
+        <div className="container-button">
+          <LinkButton
+            to={!count ? "" : `/cart`}
+            disabled={count <= 0}
+            text="Ver carrito"
+          />
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Nebula shop | Bazar de arte
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ecommerce realizado con react js con productos en venta como: libretas, playeras y tazas.
 
-## Available Scripts
+![Flujo de ecommerce](./src/assets/gif/nebula-shop.gif).
 
-In the project directory, you can run:
+## Cómo ver el proyecto en línea
 
-### `npm start`
+El proyecto se encuentra desplegado en github pages en el siguiente enlace:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## `npm start`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Ejecutar `npm start` para iniciar el proyecto de forma local.
 
-### `npm test`
+## Dependencias
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para instalar todas las dependecias ejecutar en terminal `npm install`
 
-### `npm run build`
+### Moment js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Uso de moment js para dar formato de MM/DD/AA a la fecha en la que se genera la orden y ya tenerla canalizada así en la base de datos Firebase ya que en el futuro se tiene planteado mostrar esta información como detalle de la compra del usuario.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Enlace](https://github.com/moment/moment/ "Repositorio moment js")
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Sass
 
-### `npm run eject`
+Sass como lenguaje para hojas de estilos, así mismo para el ordenamiento de mis archivos .scss por componentes importandolos en el index.scss.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Enlace](https://github.com/sass/sass "Repositorio sass")
